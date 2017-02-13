@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SmartWheel Controller</string>
+    <string name="action_settings">블루투스 장치 검색</string>
+
+    <!-- BluetoothChat -->
+    
+    <string name="not_connected">장치에 연결되지 않음</string>
+    <string name="title_connecting">연결중...</string>
+    <string name="title_not_connected">연결 안됨</string>
+
+    <!-- DeviceListActivity -->
+    <string name="scanning">장치 검색중</string>
+    <string name="select_device">연결 할 장치 선택</string>
+    <string name="none_paired">페어링된 장치가 없습니다.</string>
+    <string name="none_found">장치를 찾을수 없음</string>
+    <string name="title_paired_devices">검색된 장치</string>
+    <string name="title_other_devices">연결가능한 다른장치</string>
+    <string name="button_scan">장치 검색하기</string>
+
+</resources>

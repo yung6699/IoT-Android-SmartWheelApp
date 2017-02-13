@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:weightSum="1"
+    tools:context="com.example.smartwheel01.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <!-- 속도 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/gradient_linear_drawable2"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_drawable_ractangle"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/speed_display"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="Speed"
+                    android:textColor="#ffffff"
+                    android:textSize="40sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 경계 레이아웃 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"
+            android:background="@drawable/gradient_linear_drawable2" >
+        </LinearLayout>
+
+        <!-- 기울기, 배터리 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.45"
+            android:background="@drawable/gradient_linear_drawable2"
+            android:orientation="vertical"
+            android:weightSum="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.45"
+                android:background="@drawable/gradient_drawable_ractangle"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <TextView
+                    android:id="@+id/connection_display"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/title_not_connected"
+                    android:textColor="#ffffff"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <!-- 공백 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <ToggleButton
+                    android:id="@+id/engine_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/engine_start"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 속도 조절 -->
+
+
+    <!-- 방향 조절 버튼 -->
+
+    <RelativeLayout
+        android:id="@+id/control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.7"
+        android:background="@drawable/gradient_drawable_ractangle" >
+
+        <Button
+            android:id="@+id/bluetooth_btn"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignBaseline="@+id/speed_up_btn"
+            android:layout_toLeftOf="@+id/speed_up_btn"
+            android:background="@drawable/bluetooth" />
+
+        <ToggleButton
+            android:id="@+id/light_btn"
+            android:layout_width="60dp"
+            android:layout_height="70dp"
+            android:layout_margin="25dp"
+            android:layout_alignBaseline="@+id/speed_up_btn"
+            android:layout_toRightOf="@+id/speed_up_btn"
+            android:background="@drawable/light_off"
+            android:textOff=""
+            android:textOn="" />
+
+        <Button
+            android:id="@+id/centerView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/stop_button"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/speed_up_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/centerView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/up_button" />
+
+        <Button
+            android:id="@+id/speed_down_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/centerView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/down_button" />
+
+        <Button
+            android:id="@+id/left_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/speed_down_btn"
+            android:layout_toLeftOf="@+id/speed_up_btn"
+            android:background="@drawable/left_button" />
+
+        <Button
+            android:id="@+id/right_btn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/speed_down_btn"
+            android:layout_toRightOf="@+id/centerView"
+            android:background="@drawable/right_button" />
+
+        <ToggleButton
+            android:id="@+id/left_wheel"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignBaseline="@+id/speed_down_btn"
+            android:layout_alignLeft="@+id/startBtn"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/speed_down_btn"
+            android:background="@drawable/forward"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/right_wheel"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignBaseline="@+id/speed_down_btn"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/speed_down_btn"
+            android:background="@drawable/forward"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+</LinearLayout>
